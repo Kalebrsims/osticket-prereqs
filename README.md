@@ -1,3 +1,5 @@
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/d421be6e-1ac4-4c4d-8951-b6f2ba79a5be)
+
 # osTicket- Prerequisites and Instillations
 <p>This tutorial outlines the prerequisites and instillation of the open-source help desk ticketing system osTicket.</p> 
 <h2>Video Demonstration</h2> 
@@ -17,24 +19,16 @@ In this project, I build a ticketing system in Azure and install various resourc
 ## Operating Systems Used
 - Windows 10 (21H2)
 
-## Architecture After Hardening / Security Controls
+## List of Prerequisites
 ![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
 
-The architecture of the mini honeynet in Azure consists of the following components:
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+- Item 5
 
-- Virtual Network (VNet)
-- Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
-- Azure Key Vault
-- Azure Storage Account
-- Microsoft Sentinel
-
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
-
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
-
-## Attack Maps Before Hardening / Security Controls
+## Instillation Steps
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
 ![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
 ![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
