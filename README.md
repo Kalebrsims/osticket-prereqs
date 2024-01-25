@@ -20,32 +20,64 @@ In this project, I build a ticketing system in Azure and install various resourc
 - Windows 10 (21H2)
 
 ## List of Prerequisites
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/b9e0d8f1-03bd-4d3f-81b9-ee2e7fe98efe)
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+
+- Create a Resource Group
+- Create a Windows 10 Virtual Machine (VM) with 2-4 Virtual CPUs
+When creating the VM, allow it to create a new Virtual Network (Vnet)
+
+
 
 ## Instillation Steps
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/8239e9c9-a0ba-475e-b724-a6216607c330)
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/c199349f-c112-4315-b314-d61b3b963714)
 
-## Metrics Before Hardening / Security Controls
+## Post Instillation Steps
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/61a2d178-ffb7-4797-9460-42ef14e0264c)
+Configure Roles
+Admin Panel -> Agents -> Roles
+Supreme Admin
+Configure Departments
+Admin Panel -> Agents -> Departments
+System Administrators
+Configure Teams
+Admin Panel -> Agents -> Teams
+Level I Support
+Level II Support
+Allow anyone to create tickets
+Admin Panel -> Settings -> User Settings
+Registration Required: Require registration and login to create tickets 
+Configure Agents (workers)
+Admin Panel -> Agents -> Add New
+Jane
+John
+Configure Users (customers)
+Agent Panel -> Users -> Add New
+Karen
+Ken
+Configure SLA
+Admin Panel -> Manage -> SLA
+Sev-A (1 hour, 24/7)
+Sev-B (4 hours, 24/7)
+Sev-C (8 hours, business hours)
+Configure Help Topics
+Admin Panel -> Manage -> Help Topics
+Business Critical Outage
+Personal Computer Issues
+Equipment Request
+Password Reset
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
 
-| Metric                   | Count
-| ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+## osTicket: Ticket Lifecycle Examples
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/f98c2618-8b50-4d65-998d-68eff5f64bf3)
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/34ad2787-e1fe-47cd-b92a-197e844d1894)
+![image](https://github.com/Kalebrsims/osticket-prereqs/assets/155590792/0bf16cd8-5a3b-4c39-ad1a-9bf5b2f410f7)
+<p> Creating, triaging, and solving tickets. 
+Ticket examples:
+Sev-A (1 hour, 24/7) [entire mobile/online banking system is down] -> SysAdmins
+Sev-B (4 hours, 24/7) [accounting department needs adobe upgrade, broken]
+Sev-B/C (2 hours, business hours) </p>
 
 ## Attack Maps Before Hardening / Security Controls
 
